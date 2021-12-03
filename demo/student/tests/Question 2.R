@@ -9,8 +9,8 @@ test = list(
       failure_message = "Oops! Let's give it another try. Ensure you have filtered the penguins data to only keep rows where the entry for **species** exactly matches **Adelie**.",
       code = {
         test_that('the subset only has Adelie penguins', {
-          expect_output(print(unique(penguins_subset$species)), "[1] Adelie", fixed = TRUE)
-  
+          expect_output(print(unique(penguins_subset$species)), "Adelie", fixed = TRUE)
+          
         })
   
       }
@@ -23,8 +23,8 @@ test = list(
       failure_message = "Oops! Let's give it another try. Perhaps we included some male penguins?",
       code = {
         test_that('the subset only has female penguins', {
-          expect_output(print(unique(penguins_subset$sex)), "[1] female", fixed = TRUE)
-  
+          expect_output(print(unique(penguins_subset$sex)), "female", fixed = TRUE)
+          
         })
       }
     ),
@@ -36,8 +36,8 @@ test = list(
       failure_message = "Almost there. Let's give it another try. Perhaps we included some Biscoe penguins?",
       code = {
         test_that('the subset only has penguins from Torgersen and Dream islands', {
-          expect_output(print(unique(penguins_subset$island)), "[1] Torgersen Dream", fixed = TRUE)
-  
+          expect_output(glimpse(penguins_subset), "Rows: 51\nColumns: 8", fixed = TRUE)
+          
         })
 
       }

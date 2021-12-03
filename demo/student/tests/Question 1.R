@@ -15,8 +15,8 @@ test = list(
 
         ## Test ##
         test_that('the subset only has Chinstrap penguins', {
-          expect_output(print(unique(chinstrap_penguins$species)), "[1] Chinstrap", fixed = TRUE)
-  
+          expect_output(print(unique(chinstrap_penguins$species)), "Chinstrap")
+          
         })
   
       }
